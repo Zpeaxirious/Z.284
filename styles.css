@@ -3,6 +3,7 @@ body {
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif, sans-serif;
     background-image: url("sources/background.png");
+    transition: background-color 0.5s;
     margin: 0;
     padding: 0;
 }
