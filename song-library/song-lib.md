@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z.284</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <h1>Zpeaxirious</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about/about.md">About</a</li>
+                <li><a href="song-library/song-lib.md">Songs Lib</a></li>
+                <li><a href="about/contact.md">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome to my website!</h2>
+            <p>This is a sample website layout.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Z.284</p>
+    </footer>
+</body>
+</html>
