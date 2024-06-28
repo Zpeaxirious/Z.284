@@ -39,3 +39,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+main {
+    margin: 20px;
+    text-align: center; /* Center align the content */
+}
