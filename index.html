@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z.284</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="sources/favicon.png">
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z.284 - Loading</title>
+<style>
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+        background-image: url("sources/background.png");
+        transition: background-color 0.5s;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0; /* Fallback background color */
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        animation: loading-fade 2s forwards; /* Added fade out animation */
+    }
+
+    .loader-circle {
+        width: 100%;
+        height: 100%;
+        border: 4px solid #3498db; /* Blue border */
+        border-radius: 50%;
+        animation: loading 1s infinite linear; /* Updated animation for rotation */
+    }
+
+    @keyframes loading {
+        0% {
+        transform: rotate(0deg);
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+    }
+
+    @keyframes loading-fade {
+        0% {
+            opacity: 1;
+        }
+        100% {
+        opacity: 0;
+        }
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Zpeaxirious</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about/about.html">About</a></li>
-                <li><a href="song-library/song-lib.html">Song Library</a></li>
-                <li><a href="about/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Welcome to my website!</h2>
-            <p>This is a sample website layout.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Z.284</p>
-    </footer>
+<div class="loader">
+    <div class="loader-circle"></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            document.querySelector('.loader').style.display = 'none'; // Hide the loading circle
+            setTimeout(function() {
+            window.location.href = "home/home.html"; // Redirect after fading out the loading circle
+            }, 2000); // Redirect after 2 seconds (adjust as needed)
+        }, 3000); // Hide the loading circle after 3 seconds (adjust as needed)
+    });
+</script>
 </body>
 </html>
