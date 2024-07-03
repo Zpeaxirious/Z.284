@@ -52,3 +52,37 @@ main {
     color: #dabae6;
     text-shadow: #aba0af8e 1px 0 1px;
 }
+
+/* Login & Register */
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.login-register {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    padding: 5px;
+    margin-right: 10px;
+}
