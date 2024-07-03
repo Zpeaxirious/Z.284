@@ -18,6 +18,7 @@
                 <li><a href="./song-lib">Song Library</a></li>
                 <li><a href="./contact">Contact</a></li>
             </ul>
+            <p id="username"></p>
         </nav>
     </header>
     <main>
@@ -34,7 +35,15 @@
         </section>
     </main>
     <footer>
+        <a href="https://github.com/login/oauth/authorize?client_id=Ov23liVbMURXX2KSVxUt&redirect_uri=https://zpeaxirious.github.io/Z.284/&scope=user" target="_blank">Login with GitHub</a>
         <p>&copy; 2024 Z.284</p>
     </footer>
+    <script>
+        const userData = {
+            login: 'githubUsername'
+        };
+        const usernameElement = document.getElementById('username');
+        usernameElement.textContent = userData.login;
+    </script>
 </body>
 </html>
