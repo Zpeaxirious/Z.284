@@ -22,7 +22,7 @@ body {
 }
 
 main {
-    font-family: 'nasa';
+    font-family: 'nasa', sans-serif;
 }
 
 header {
