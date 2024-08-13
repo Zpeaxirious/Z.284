@@ -25,6 +25,7 @@ body {
 main {
     font-family: 'nasa';
     transition:  0.5s;
+}
 
 header {
     background: rgb(48, 44, 49); /* Fallback */
