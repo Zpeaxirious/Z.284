@@ -11,7 +11,7 @@ body {
 
 header {
     background: rgb(48, 44, 49); /* Fallback */
-    background: rgba(48, 44, 49, 0);
+    background: rgba(48, 44, 49, 1);
     color: #fbf0ff;
     padding: 10px;
     text-align: center;
@@ -20,7 +20,7 @@ header {
 
 footer {
     background: rgb(48, 44, 49); /* Fallback */
-    background: rgba(48, 44, 49, 0);
+    background: rgba(48, 44, 49, 1);
     color: #fbf0ff;
     text-align: center;
     padding: 10px;
