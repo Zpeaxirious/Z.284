@@ -21,9 +21,7 @@ body {
     padding: 0;
 }
 
-#main {
-    font-family: 'nasa', sans-serif;
-}
+#main {font-family: 'nasa', sans-serif;}
 
 header {
     background: rgb(48, 44, 49); /* Fallback */
