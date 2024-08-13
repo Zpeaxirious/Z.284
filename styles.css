@@ -8,9 +8,8 @@
 body {
     font-family: 'virgo';
     background-image: url("sources/background.jpg");
-    background-position-y: bottom;
-    background-position-x: left;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     transition: 0.5s;
     margin: 0;
     padding: 0;
