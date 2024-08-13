@@ -10,6 +10,7 @@ body {
     background-image: url("sources/background.jpg");
     background-position-y: bottom;
     background-position-x: left;
+    background-size: contain;
     transition: 0.5s;
     margin: 0;
     padding: 0;
