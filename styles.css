@@ -13,7 +13,6 @@
 }
 
 body {
-    font-family: 'nasa';
     background-image: url("sources/background.jpg");
     background-position: center;
     background-size: cover;
@@ -24,7 +23,6 @@ body {
 
 main {
     font-family: 'nasa';
-    transition:  0.5s;
 }
 
 header {
