@@ -18,6 +18,7 @@ body {
 header {
     background: rgb(48, 44, 49); /* Fallback */
     background: rgba(48, 44, 49, 1);
+    font-family: 'virgo', sans-serif;
     color: #fbf0ff;
     padding: 10px;
     text-align: center;
@@ -27,6 +28,7 @@ header {
 footer {
     background: rgb(48, 44, 49); /* Fallback */
     background: rgba(48, 44, 49, 1);
+    font-family: 'virgo', sans-serif;
     color: #fbf0ff;
     text-align: center;
     padding: 10px;
@@ -55,6 +57,7 @@ nav a {
 main {
     margin: 20px;
     text-align: center;
+    font-family: 'virgo', sans-serif;
     color: #dabae6;
     text-shadow: #aba0af8e 1px 0 1px;
 }
