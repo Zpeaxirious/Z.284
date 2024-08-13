@@ -5,8 +5,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'nasa';
+    src: url('./fonts/nasa.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: 'virgo';
+    font-family: 'nasa';
     background-image: url("sources/background.jpg");
     background-position: center;
     background-size: cover;
