@@ -18,6 +18,7 @@ a {
 
 iframe {
     background-position: center;
+    size: 100%;
 }
 
 body {
