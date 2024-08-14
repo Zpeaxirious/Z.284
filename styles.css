@@ -12,12 +12,6 @@
     font-style: normal;
 }
 
-href {
-    color: rgb(255, 184, 243);
-    background-color: transparent;
-    text-decoration: none;
-}
-
 body {
     background-image: url("sources/background.jpg");
     background-position: center;
