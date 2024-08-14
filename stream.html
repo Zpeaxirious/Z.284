@@ -23,11 +23,17 @@
     <div id="main">
     <main>
         <section>
-            <iframe id="twitch-chat-embed"
-                src="https://www.twitch.tv/embed/zpeaxirious/chat?parent=zpeaxirious.twitch.tv"
-                height="500"
-                width="350">
-            </iframe>
+            <div id="twitch-embed"></div>
+            <script src="https://embed.twitch.tv/embed/v1.js"></script>
+            
+            <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+            <script type="text/javascript">
+                new Twitch.Embed("twitch-embed", {
+                    width: 855,
+                    height: 480,
+                    channel: "zpeaxirious"
+                });
+            </script>
         </section>
     </main>
     </div>
