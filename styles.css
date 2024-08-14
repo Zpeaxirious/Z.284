@@ -12,28 +12,10 @@
     font-style: normal;
 }
 
-a:link {
+href {
     color: rgb(255, 184, 243);
     background-color: transparent;
     text-decoration: none;
-}
-
-a:visited {
-    color: rgb(255, 136, 245);
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgb(255, 103, 209);
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a:active {
-    color: rgb(235, 156, 255);
-    background-color: transparent;
-    text-decoration: underline;
 }
 
 body {
