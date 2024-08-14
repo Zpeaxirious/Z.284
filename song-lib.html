@@ -10,7 +10,7 @@
         function updateFavicon() {
             const favicon = document.getElementById('favicon');
             const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            favicon.href = darkMode ? './sources/fav-dark.png' : '/sources/fav-light.png';
+            favicon.href = darkMode ? './sources/fav-dark.png' : './sources/fav-light.png';
         }
         updateFavicon();
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
