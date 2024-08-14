@@ -31,7 +31,12 @@
                 new Twitch.Embed("twitch-embed", {
                     width: 855,
                     height: 480,
+                    allowfullscreen: true,
                     channel: "zpeaxirious"
+                });
+                embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                    var player = embed.getPlayer();
+                    player.play();
                 });
             </script>
         </section>
