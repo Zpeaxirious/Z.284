@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+a {
+    color: rgb(255, 184, 243); /* Light pink color */
+}
+
 body {
     background-image: url("sources/background.jpg");
     background-position: center;
