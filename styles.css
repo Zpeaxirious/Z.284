@@ -12,11 +12,6 @@
     font-style: normal;
 }
 
-iframe {
-    width: 80%; /* Adjust as needed */
-    height: 160%; /* Adjust as needed */
-}
-
 a {
     color: rgb(255, 184, 243); /* Light pink color */
 }
