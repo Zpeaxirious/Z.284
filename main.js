@@ -7,6 +7,21 @@ document.addEventListener('visibilitychange', function() {
 });
 
 document.addEventListener('visibilitychange', function() {
+    const iframes = document.querySelectorAll('iframe');
+    if (document.hidden) {
+        iframes.forEach(iframe => {
+            iframe.style.pointerEvents = 'none';
+        });
+        console.log('Iframes disabled');
+    } else {
+        iframes.forEach(iframe => {
+            iframe.style.pointerEvents = 'auto';
+        });
+        console.log('Iframes enabled');
+    }
+});
+
+/* document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         // Unload resources or stop processes
         stopAllProcesses();
@@ -34,4 +49,4 @@ function startAllProcesses() {
 
 function loadResources() {
     // Add code to reload resources
-}
+} */
