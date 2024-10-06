@@ -43,7 +43,7 @@ header {
     text-decoration: none;
 }
 
-footer {
+.footer {
     background: rgb(48, 44, 49); /* Fallback */
     background: rgba(48, 44, 49, 1);
     font-family: 'nasa', sans-serif;
