@@ -50,7 +50,7 @@ header {
     color: #fbf0ff;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-shadow: #aba0af8e 1px 0 1px;
