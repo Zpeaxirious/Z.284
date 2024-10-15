@@ -50,7 +50,7 @@ footer {
     color: #fbf0ff;
     text-align: center;
     padding: 10px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-shadow: #aba0af8e 1px 0 1px;
