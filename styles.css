@@ -56,6 +56,19 @@ footer {
     text-shadow: #aba0af8e 1px 0 1px;
 }
 
+#footer {
+    background: rgb(48, 44, 49); /* Fallback */
+    background: rgba(48, 44, 49, 1);
+    font-family: 'nasa', sans-serif;
+    color: #fbf0ff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-shadow: #aba0af8e 1px 0 1px;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
