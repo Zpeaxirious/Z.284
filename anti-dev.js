@@ -16,22 +16,42 @@ https.get(`https://purge.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js
 });
 
 /* anti screen recording */
-const handleRecording = () => {
+let isRecording = false;
+
+function turnScreenBlack() {
     document.body.style.backgroundColor = 'black';
     document.body.style.color = 'black';
-};
+}
 
-const stopRecording = () => {
+function restoreScreen() {
     document.body.style.backgroundColor = '';
     document.body.style.color = '';
-};
+}
 
-navigator.mediaDevices.addEventListener('devicechange', (event) => {
+// Detect screen recording
+navigator.mediaDevices.addEventListener('devicechange', () => {
     navigator.mediaDevices.enumerateDevices().then(devices => {
         if (devices.some(device => device.kind === 'videoinput')) {
-            handleRecording();
+            if (!isRecording) {
+                isRecording = true;
+                turnScreenBlack();
+            }
         } else {
-            stopRecording();
+            if (isRecording) {
+                isRecording = false;
+                restoreScreen();
+            }
         }
     });
+});
+
+// Detect screenshot attempts
+document.addEventListener('keydown', function(event) {
+    const keysToDisable = ['PrintScreen', 'Insert', 'F12'];
+    const ctrlShiftKeys = ['c', 'S', 's'];
+    const metaKeys = ['4', '3'];
+    if (keysToDisable.includes(event.key) || (event.ctrlKey && ctrlShiftKeys.includes(event.key)) || (event.shiftKey && event.key === 'S') || (event.metaKey && metaKeys.includes(event.key)) || (event.shiftKey && event.key === 's')) {
+        turnScreenBlack();
+        setTimeout(restoreScreen, 3000); // Restore after 3 seconds
+    }
 });
