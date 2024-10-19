@@ -9,22 +9,18 @@ Stay updated on when Zpeaxirious will be live streaming next. Join the excitemen
 ### Song Library:
 Explore Zpeaxirious' curated song library, featuring music playlists, original compositions, and fan-favorite covers.
 
-### VODS:
-Missed a stream? Browse through our archive to catch up on past broadcasts and relive memorable moments.
-
 ### Lore:
-Dive into the mystical world of Zpeaxirious and uncover the lore behind their virtual persona. Discover the fascinating stories and adventures that shape their character.
+Dive into Zpeaxirious' mystical world and uncover the lore behind their persona. Discover the fascinating stories and adventures that shape their character.
 
 ### Contact:
-Have any questions, feedback, or collaboration inquiries? Feel free to reach out to me at zpeaxirious@protonmail.com or through my social media channels.
+Have any questions, feedback, or collaboration inquiries? Feel free to reach out to me through Zpeaxirious' social media channels.
 
 ## Progress
 
 | Page | Page Name | Status |
 | :-: | :-: | :-: |
 | /about | About | Started |
-| /stream | Live | Polishing |
+| /stream | Live | WIP |
 | /song-lib | Song Lib | WIP |
-| NONE | VODS | WIP |
 | /lore | Lore | Started |
 | /contact | Contact | Started |
