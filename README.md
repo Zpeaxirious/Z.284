@@ -21,6 +21,6 @@ Have any questions, feedback, or collaboration inquiries? Feel free to reach out
 | :-: | :-: | :-: |
 | /about | About | Started |
 | /stream | Live | WIP |
-| /song-lib | Song Lib | WIP |
+| /song-lib | Gallery | WIP |
 | /lore | Lore | Started |
 | /contact | Contact | Started |
