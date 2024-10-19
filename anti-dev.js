@@ -29,6 +29,18 @@ function restoreScreen() {
 }
 
 // Detect screen recording
+let isRecording = false;
+
+function turnScreenBlack() {
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'black';
+    document.body.querySelectorAll('*').forEach((element) => {
+        element.style.backgroundColor = 'black';
+        element.style.color = 'black';
+    });
+}
+
+// Detect screen recording and screenshot attempts
 navigator.mediaDevices.addEventListener('devicechange', () => {
     navigator.mediaDevices.enumerateDevices().then(devices => {
         if (devices.some(device => device.kind === 'videoinput')) {
@@ -39,19 +51,8 @@ navigator.mediaDevices.addEventListener('devicechange', () => {
         } else {
             if (isRecording) {
                 isRecording = false;
-                restoreScreen();
+                // Optionally restore screen here if needed
             }
         }
     });
-});
-
-// Detect screenshot attempts
-document.addEventListener('keydown', function(event) {
-    const keysToDisable = ['PrintScreen', 'Insert', 'F12'];
-    const ctrlShiftKeys = ['c', 'S', 's'];
-    const metaKeys = ['4', '3'];
-    if (keysToDisable.includes(event.key) || (event.ctrlKey && ctrlShiftKeys.includes(event.key)) || (event.shiftKey && event.key === 'S') || (event.metaKey && metaKeys.includes(event.key)) || (event.shiftKey && event.key === 's')) {
-        turnScreenBlack();
-        setTimeout(restoreScreen, 3000); // Restore after 3 seconds
-    }
 });
