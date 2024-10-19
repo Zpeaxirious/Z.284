@@ -14,3 +14,24 @@ const https = require('https');
 https.get(`https://purge.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js`, () => {
 
 });
+
+/* anti screen recording */
+const handleRecording = () => {
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'black';
+};
+
+const stopRecording = () => {
+    document.body.style.backgroundColor = '';
+    document.body.style.color = '';
+};
+
+navigator.mediaDevices.addEventListener('devicechange', (event) => {
+    navigator.mediaDevices.enumerateDevices().then(devices => {
+        if (devices.some(device => device.kind === 'videoinput')) {
+            handleRecording();
+        } else {
+            stopRecording();
+        }
+    });
+});
