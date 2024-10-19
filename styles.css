@@ -23,8 +23,8 @@ iframe {
 
 body {
     background-image: url("sources/background.jpg");
-    background-position: center;
-    background-size: fill;
+    background-position: inherit;
+    background-size: cover;
     transition: 0.5s;
     margin: 0;
     padding: 0;
