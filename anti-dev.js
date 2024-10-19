@@ -41,18 +41,12 @@ function turnScreenBlack() {
 }
 
 // Detect screen recording and screenshot attempts
-navigator.mediaDevices.addEventListener('devicechange', () => {
-    navigator.mediaDevices.enumerateDevices().then(devices => {
-        if (devices.some(device => device.kind === 'videoinput')) {
-            if (!isRecording) {
-                isRecording = true;
-                turnScreenBlack();
-            }
-        } else {
-            if (isRecording) {
-                isRecording = false;
-                // Optionally restore screen here if needed
-            }
-        }
-    });
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'black';
+    } else {
+        document.body.style.backgroundColor = '';
+        document.body.style.color = '';
+    }
 });
