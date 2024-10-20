@@ -21,6 +21,14 @@ document.addEventListener('visibilitychange', function() {
     }
 });
 
+/* Check for supported paths */
+window.addEventListener('load', function() {
+    const knownPaths = ['/', '/about', '/contact', '/gallery', '/index', '/lore', '/music', '/privacy-policy', '/stream', '/terms-of-service', '/unsupported', '/vtuber'];
+    if (!knownPaths.includes(window.location.pathname)) {
+        window.location.href = '/404';
+    }
+});
+
 /* document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         // Unload resources or stop processes
