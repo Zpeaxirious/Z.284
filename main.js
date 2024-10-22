@@ -6,7 +6,9 @@ document.addEventListener('visibilitychange', function() {
     }
 });
 
-document.body.classList.add('loaded');
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
 
 document.addEventListener('visibilitychange', function() {
     const iframes = document.querySelectorAll('iframe');
