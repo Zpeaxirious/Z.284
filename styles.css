@@ -22,9 +22,7 @@ iframe {
 }
 
 body {
-    background-image: url("sources/background.jpg");
-    background-position: inherit;
-    background-size: cover;
+    background-color: #ffffff;
     transition: 0.5s;
     margin: 0;
     padding: 0;

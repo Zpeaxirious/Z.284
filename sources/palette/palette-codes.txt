@@ -1,0 +1,23 @@
+Your selected colors:
+
+    Text: #250a2e - rgb(37, 10, 46) - hsl(285, 64%, 11%)
+    Background: #ffffff - rgb(255, 255, 255) - hsl(0, 0%, 100%)
+    Primary: #dd1dca - rgb(221, 29, 202) - hsl(306, 77%, 49%)
+    Secondary: #ffdbfb - rgb(255, 219, 251) - hsl(307, 100%, 93%)
+    Accent: #ff3de2 - rgb(255, 61, 226) - hsl(309, 100%, 62%)
+
+
+:root[data-theme="light"] {
+  --text: #250a2e;
+  --background: #ffffff;
+  --primary: #dd1dca;
+  --secondary: #ffdbfb;
+  --accent: #ff3de2;
+}
+:root[data-theme="dark"] {
+  --text: #ecd1f5;
+  --background: #000000;
+  --primary: #e222cf;
+  --secondary: #240020;
+  --accent: #c200a5;
+}
