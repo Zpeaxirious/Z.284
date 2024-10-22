@@ -12,8 +12,23 @@
     font-style: normal;
 }
 
+:root[data-theme="light"] {
+    --text: #250a2e;
+    --background: #ffffff;
+    --primary: #dd1dca;
+    --secondary: #ffdbfb;
+    --accent: #ff3de2;
+}
+:root[data-theme="dark"] {
+    --text: #ecd1f5;
+    --background: #000000;
+    --primary: #e222cf;
+    --secondary: #240020;
+    --accent: #c200a5;
+}
+
 a {
-    color: #250a2e; /* links */
+    /* color: #250a2e; links */
 }
 
 iframe {
@@ -22,7 +37,7 @@ iframe {
 }
 
 body {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     transition: 0.5s;
     margin: 0;
     padding: 0;
@@ -33,7 +48,7 @@ body {
 header {
     background: #ffdbfb;
     font-family: 'virgo', sans-serif;
-    color: #250a2e;
+    /* color: #250a2e; */
     padding: 10px;
     text-align: center;
     text-shadow: #aba0af8e 1px 0 1px;
@@ -43,7 +58,7 @@ header {
 footer {
     background: #ffdbfb;
     font-family: 'nasa', sans-serif;
-    color: #250a2e;
+    /* color: #250a2e; */
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -55,7 +70,7 @@ footer {
 #footer {
     background: #ffdbfb;
     font-family: 'nasa', sans-serif;
-    color: #250a2e;
+    /* color: #250a2e; */
     text-align: center;
     padding: 10px;
     position: relative;
@@ -75,7 +90,7 @@ nav ul li {
 }
 
 nav a {
-    color: #250a2e;
+    /* color: #250a2e; */
     text-shadow: #aba0af8e 1px 0 1px;
     text-decoration: none;
 }
@@ -84,6 +99,6 @@ main {
     margin: 20px;
     text-align: center;
     font-family: 'nasa', sans-serif;
-    color: #250a2e;
+    /* color: #250a2e; */
     text-shadow: #aba0af8e 1px 0 1px;
 }
