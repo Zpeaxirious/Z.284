@@ -13,7 +13,7 @@
 }
 
 a {
-    color: #fbf0ff; /* Light pink color (links) */
+    color: #250a2e; /* links */
 }
 
 iframe {
@@ -53,9 +53,9 @@ footer {
 }
 
 #footer {
-    background: rgb(48, 44, 49);
+    background: #ffdbfb;
     font-family: 'nasa', sans-serif;
-    color: #fbf0ff;
+    color: #250a2e;
     text-align: center;
     padding: 10px;
     position: relative;
@@ -75,7 +75,7 @@ nav ul li {
 }
 
 nav a {
-    color: #fbf0ff;
+    color: #250a2e;
     text-shadow: #aba0af8e 1px 0 1px;
     text-decoration: none;
 }
@@ -84,6 +84,6 @@ main {
     margin: 20px;
     text-align: center;
     font-family: 'nasa', sans-serif;
-    color: #dabae6;
+    color: #250a2e;
     text-shadow: #aba0af8e 1px 0 1px;
 }
