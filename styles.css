@@ -31,9 +31,9 @@ body {
 #main {font-family: 'nasa', sans-serif;}
 
 header {
-    background: #ff3de2;
+    background: #ffdbfb;
     font-family: 'virgo', sans-serif;
-    color: #ffdbfb;
+    color: #250a2e;
     padding: 10px;
     text-align: center;
     text-shadow: #aba0af8e 1px 0 1px;
@@ -41,9 +41,9 @@ header {
 }
 
 footer {
-    background: rgb(48, 44, 49);
+    background: #ffdbfb;
     font-family: 'nasa', sans-serif;
-    color: #fbf0ff;
+    color: #250a2e;
     text-align: center;
     padding: 10px;
     position: fixed;
