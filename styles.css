@@ -13,7 +13,7 @@
 }
 
 a {
-    color: #fbf0ff; /* Light pink color */
+    color: #fbf0ff; /* Light pink color (links) */
 }
 
 iframe {
@@ -31,10 +31,9 @@ body {
 #main {font-family: 'nasa', sans-serif;}
 
 header {
-    background: rgb(48, 44, 49); /* Fallback */
-    background: rgba(48, 44, 49, 1);
+    background: #ff3de2;
     font-family: 'virgo', sans-serif;
-    color: #fbf0ff;
+    color: #ffdbfb;
     padding: 10px;
     text-align: center;
     text-shadow: #aba0af8e 1px 0 1px;
@@ -42,8 +41,7 @@ header {
 }
 
 footer {
-    background: rgb(48, 44, 49); /* Fallback */
-    background: rgba(48, 44, 49, 1);
+    background: rgb(48, 44, 49);
     font-family: 'nasa', sans-serif;
     color: #fbf0ff;
     text-align: center;
@@ -55,8 +53,7 @@ footer {
 }
 
 #footer {
-    background: rgb(48, 44, 49); /* Fallback */
-    background: rgba(48, 44, 49, 1);
+    background: rgb(48, 44, 49);
     font-family: 'nasa', sans-serif;
     color: #fbf0ff;
     text-align: center;
