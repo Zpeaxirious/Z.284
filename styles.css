@@ -30,21 +30,25 @@
 /* Unvisited link */
 a:link {
     color: var(--text);
+    text-decoration: none;
 }
 
 /* Visited link */
 a:visited {
     color: var(--text);
+    text-decoration: none;
 }
 
 /* Mouse over link */
 a:hover {
     color: var(--text);
+    text-decoration: none;
 }
 
 /* Selected link */
 a:active {
     color: var(--text);
+    text-decoration: none;
 }
 
 body {
