@@ -27,22 +27,11 @@
     --accent: #c200a5;
 }
 
-a {
-    /* links */
-}
-
 body {
     opacity: 0;
-    transition: opacity 0.85s ease-in-out;
     margin: 0;
     padding: 0;
 }
-
-body.loaded {
-    opacity: 1;
-}
-
-#main {font-family: 'nasa', sans-serif;}
 
 header {
     background: #ffdbfb;
@@ -91,8 +80,8 @@ nav a {
 }
 
 main {
+    font-family: 'nasa', sans-serif;
     margin: 20px;
     text-align: center;
-    font-family: 'nasa', sans-serif;
     text-shadow: #aba0af8e 1px 0 1px;
 }
