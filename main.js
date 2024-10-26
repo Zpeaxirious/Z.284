@@ -53,14 +53,15 @@ function onUpdate() {
     }
 }
 
-function applyTheme(theme) {
+/**/
+function switchTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
 }
 
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-applyTheme(prefersDarkScheme ? 'dark' : 'light');
+switchTheme(prefersDarkScheme ? 'dark' : 'light');
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
     const newTheme = e.matches ? 'dark' : 'light';
-    applyTheme(newTheme);
+    switchTheme(newTheme);
 });
