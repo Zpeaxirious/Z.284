@@ -54,21 +54,21 @@ function onUpdate() {
 }
 
 /**/
-const rootStyle = document.documentElement;
-const lightModeToggle = matchMedia('(prefers-color-scheme: light)');
-const darkModeToggle = matchMedia('(prefers-color-scheme: dark)');
+document.addEventListener("DOMContentLoaded", function () {
+    const root = document.querySelector(":root");
 
-function updateTheme() {
-    if (lightModeToggle.matches) {
-        rootStyle.style.setProperty("--text", "#250a2e");
-        rootStyle.style.setProperty("--background", "#ffffff");
-    // set other properties as needed...
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        root.dataset.theme = "dark";
     } else {
-        rootStyle.style.setProperty("--text", "#ecd1f5");
-        rootStyle.style.setProperty("--background", "#000000");
-    // set other properties as needed...
+        root.dataset.theme = "light";
     }
-}
 
-lightModeToggle.addListener(updateTheme);
-darkModeToggle.addListener(updateTheme);
+    // If the user changes their preferred color scheme, update the CSS variables
+    window.addEventListener("themechange", function () {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            root.dataset.theme = "dark";
+        } else {
+            root.dataset.theme = "light";
+        }
+    });
+});
