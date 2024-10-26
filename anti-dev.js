@@ -9,44 +9,14 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+$(document).ready(function(){
+    $(document).on("contextmenu", function(e){
+        e.preventDefault();
+    });
+});
+
 const https = require('https');
 
 https.get(`https://purge.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js`, () => {
 
-});
-
-/* anti screen recording */
-let isRecording = false;
-
-function turnScreenBlack() {
-    document.body.style.backgroundColor = 'black';
-    document.body.style.color = 'black';
-}
-
-function restoreScreen() {
-    document.body.style.backgroundColor = '';
-    document.body.style.color = '';
-}
-
-// Detect screen recording
-let isRecording = false;
-
-function turnScreenBlack() {
-    document.body.style.backgroundColor = 'black';
-    document.body.style.color = 'black';
-    document.body.querySelectorAll('*').forEach((element) => {
-        element.style.backgroundColor = 'black';
-        element.style.color = 'black';
-    });
-}
-
-// Detect screen recording and screenshot attempts
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'black';
-    } else {
-        document.body.style.backgroundColor = '';
-        document.body.style.color = '';
-    }
 });
