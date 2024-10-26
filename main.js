@@ -1,3 +1,4 @@
+/* Iframe Project Feature */
 document.addEventListener('visibilitychange', function() {
     const iframes = document.querySelectorAll('iframe');
     if (document.hidden) {
@@ -23,7 +24,7 @@ window.addEventListener('load', function() {
 
 /* Mobile Check */
 if (/Mobi|Android/i.test(navigator.userAgent)) {
-    window.location.href = "./unsupported";
+    window.location.href = "./404";
 }
 
 
