@@ -12,19 +12,28 @@
     font-style: normal;
 }
 
-:root[data-theme="light"] {
-    --text: #250a2e;
-    --background: #ffffff;
-    --primary: #dd1dca;
-    --secondary: #ffdbfb;
-    --accent: #ff3de2;
+:root {
+    --text: var(--color-text);
+    --background: var(--color-background);
+    --primary: var(--color-primary);
+    --secondary: var(--color-secondary);
+    --accent: var(--color-accent);
 }
+
+:root[data-theme="light"] {
+    --color-text: #250a2e;
+    --color-background: #ffffff;
+    --color-primary: #dd1dca;
+    --color-secondary: #ffdbfb;
+    --color-accent: #ff3de2;
+}
+
 :root[data-theme="dark"] {
-    --text: #ecd1f5;
-    --background: #000000;
-    --primary: #e222cf;
-    --secondary: #240020;
-    --accent: #c200a5;
+    --color-text: #ecd1f5;
+    --color-background: #000000;
+    --color-primary: #e222cf;
+    --color-secondary: #240020;
+    --color-accent: #c200a5;
 }
 
 /* Unvisited link */
