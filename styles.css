@@ -27,6 +27,26 @@
     --accent: #c200a5;
 }
 
+/* Unvisited link */
+a:link {
+    color: var(--text);
+}
+
+/* Visited link */
+a:visited {
+    color: var(--text);
+}
+
+/* Mouse over link */
+a:hover {
+    color: var(--text);
+}
+
+/* Selected link */
+a:active {
+    color: var(--text);
+}
+
 body {
     opacity: 1;
     margin: 0;
@@ -34,7 +54,7 @@ body {
 }
 
 header {
-    background: #ffdbfb;
+    background: var(--secondary);
     font-family: 'virgo', sans-serif;
     padding: 10px;
     text-align: center;
@@ -43,7 +63,7 @@ header {
 }
 
 footer {
-    background: #ffdbfb;
+    background: var(--secondary);
     font-family: 'nasa', sans-serif;
     text-align: center;
     padding: 10px;
@@ -54,7 +74,7 @@ footer {
 }
 
 #footer {
-    background: #ffdbfb;
+    background: var(--secondary);
     font-family: 'nasa', sans-serif;
     text-align: center;
     padding: 10px;
