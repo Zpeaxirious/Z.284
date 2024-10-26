@@ -35,7 +35,7 @@ https.get(`https://purge.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js
 
 });
 
-/* Favicon Project */
+/* Theme Project */
 matcher = window.matchMedia('(prefers-color-scheme: dark)');
 matcher.addListener(onUpdate);
 onUpdate();
@@ -52,3 +52,15 @@ function onUpdate() {
         darkSchemeIcon.remove();
     }
 }
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+}
+
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(prefersDarkScheme ? 'dark' : 'light');
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    const newTheme = e.matches ? 'dark' : 'light';
+    applyTheme(newTheme);
+});
