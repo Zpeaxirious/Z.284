@@ -81,8 +81,8 @@ function updateTime() {
     const time = date.toLocaleTimeString();
     const day = date.toLocaleDateString(undefined, options);
     document.getElementById('time').innerHTML =
-        `Today is: ${day}, Current Time: ${time}`;
+        `${time}`;
 }
 
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1);
 updateTime();
