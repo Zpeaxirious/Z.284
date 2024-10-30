@@ -74,15 +74,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* <div id="time"></div> */
-function updateTime() {
-    const date = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const time = date.toLocaleTimeString();
-    const day = date.toLocaleDateString(undefined, options);
-    document.getElementById('time').innerHTML =
-        `${time}`;
+// Excerpt from https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+function geoFindMe() {
+    if (!navigator.geolocation){
+        console.log("Geolocation isn't supported for your browser.");
+        return;
+    }
+    function success(position) {
+        var latitude  = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        reverseGeocodingWithGoogle(latitude, longitude)
+    }
+    function error() {
+        console.log("Unable to retrieve location");
+    }
+    navigator.geolocation.getCurrentPosition(success, error);
 }
 
-setInterval(updateTime, 1);
-updateTime();
+fetch('https://extreme-ip-lookup.com/json/')
+.then( res => res.json())
+.then(response => {
+    console.log("Country: ", response.country);
+    })
+.catch((data, status) => {
+    console.log('Request failed');
+})
+
+document.getElementById('guess').innerText = moment.tz.guess();
