@@ -119,3 +119,9 @@ main {
     text-align: center;
     text-shadow: #aba0af8e 1px 0 1px;
 }
+
+/* Time */
+#time {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
