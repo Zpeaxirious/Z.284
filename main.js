@@ -74,30 +74,57 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Excerpt from https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
-function geoFindMe() {
+/* Some Time Script */
+document.addEventListener("DOMContentLoaded", function(event) {
+    var address = document.querySelector('.address')
     if (!navigator.geolocation){
-        console.log("Geolocation isn't supported for your browser.");
-        return;
+        console.log("Geolocation is not supported by your browser");
+        ipLookup();
+    } else {
+        navigator.geolocation.getCurrentPosition(success, error);
     }
+    
     function success(position) {
         var latitude  = position.coords.latitude;
         var longitude = position.coords.longitude;
-        reverseGeocodingWithGoogle(latitude, longitude)
+        reverseGeocodingWithGoogle(longitude, latitude)
     }
     function error() {
-        console.log("Unable to retrieve location");
+        console.log("Unable to retrieve your location");
     }
-    navigator.geolocation.getCurrentPosition(success, error);
-}
-
-fetch('https://extreme-ip-lookup.com/json/')
-.then( res => res.json())
-.then(response => {
-    console.log("Country: ", response.country);
+    function ipLookup() {
+        fetch('https://extreme-ip-lookup.com/json/')
+        .then( res => res.json())
+        .then(response => {
+            fallbackProcess(response)
     })
-.catch((data, status) => {
-    console.log('Request failed');
-})
-
-document.getElementById('guess').innerText = moment.tz.guess();
+        .catch((data, status) => {
+            address.innerText = 'We could not find your location'
+        })
+    }
+    
+    function reverseGeocodingWithGoogle(latitude, longitude) {
+        fetch(`https://maps.googleapis.com/maps/api/geocode/json?
+        latlng=${latitude},${longitude}&key={GOOGLE_MAP_KEY}`)
+        .then( res => res.json())
+        .then(response => {
+        processUserData(response)
+    })
+        .catch(status => {
+        ipLookup()
+    })
+    }
+    
+    function processUserData(response) {
+        address.innerText = response.results[0].formatted_address
+    }
+    
+    function fallbackProcess(response) {
+        address.innerText = `${response.city}, ${response.country}`
+    }
+    
+    var localTime = jstz.determine().name();
+    var serverTime = "Asia/Novosibirsk";
+    document.querySelector('.server').innerText = new Date().toLocaleString("en-US", {timeZone: serverTime});
+    document.querySelector('.local').innerText = new Date().toLocaleString("en-US", {timeZone: localTime});
+});
