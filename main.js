@@ -1,6 +1,6 @@
 /* Check for supported paths */
 window.addEventListener('load', function() {
-    const knownPaths = ['/', '/about', '/contact', '/gallery', '/index', '/lore', '/music', '/privacy-policy', '/stream', '/terms-of-service', '/vtuber', '/404'];
+    const knownPaths = ['/', '/about', '/contact', '/gallery', '/index', '/lore', '/music', '/privacy-policy', '/stream', '/terms-of-service', '/vtuber', '/404', '/m'];
     if (!knownPaths.includes(window.location.pathname) && window.location.pathname !== '/404') {
         window.location.href = '/404';
     }
