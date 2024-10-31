@@ -24,3 +24,5 @@ Have any questions, feedback, or collaboration inquiries? Feel free to reach out
 | /gallery | Gallery | WIP |
 | /lore | Lore | Started |
 | /contact | Contact | Started |
+| /vtuber | VTuber | WIP |
+| /lore | Lore | Started |
