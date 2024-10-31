@@ -68,7 +68,7 @@ body {
 }
 
 header {
-    background: var(--secondary);
+    background: #ffc1f8;
     font-family: 'virgo', sans-serif;
     padding: 10px;
     text-align: center;
@@ -77,7 +77,7 @@ header {
 }
 
 footer {
-    background: var(--secondary);
+    background: #ffc1f8;
     font-family: 'nasa', sans-serif;
     text-align: center;
     padding: 10px;
@@ -88,7 +88,7 @@ footer {
 }
 
 #footer {
-    background: var(--secondary);
+    background: #ffc1f8;
     font-family: 'nasa', sans-serif;
     text-align: center;
     padding: 10px;
