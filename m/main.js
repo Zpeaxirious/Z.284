@@ -6,11 +6,6 @@ window.addEventListener('load', function() {
     }
 });
 
-/* Mobile Check */
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-    window.location.href = "./m";
-}
-
 /* Anti Keys*/
 document.addEventListener('keydown', function(event) {
     const keysToDisable = ['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F12', 'Delete', 'Insert', 'Pause', 'PrintScreen', 'Home', 'End', 'NumLock', 'Meta'];
