@@ -132,7 +132,7 @@ main {
     height: calc(100vh - 300px); /* Height minus header, footer, and top/bottom padding */
     border-radius: 16px; /* Make the beveling 16px */
     padding: 10px;
-    background-color: #f0f0f0; /* Change this to customize the background color */
+    background-color: var(--secondary) /* Change this to customize the background color */
     overflow-y: auto; /* Enable scrolling */
 }
 
