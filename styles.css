@@ -143,4 +143,9 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    text-shadow: 
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; /* Outline effect */
 }
