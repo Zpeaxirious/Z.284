@@ -132,7 +132,7 @@ main {
     border-radius: 16px; /* Make the beveling 16px */
     padding: 10px;
     background-color: #f0f0f0; /* Change this to customize the background color */
-    height: calc(100vh - 50px); /* Set the height to the viewport height minus the header and footer heights (25px + 25px) */
+    height: calc(80vh - 40px); /* Set the height to the viewport height minus the header and footer heights (25px + 25px) */
     overflow-y: auto; /* Enable scrolling */
 }
 
