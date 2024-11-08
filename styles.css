@@ -125,3 +125,22 @@ main {
     font-size: 1.2rem;
     margin-top: 10px;
 }
+
+.scrollable-box {
+    position: relative;
+    padding: 25px; /* Add a 25px padding on top and bottom */
+    border-radius: 16px; /* Make the beveling 16px */
+    padding: 10px;
+    background-color: #f0f0f0; /* Change this to customize the background color */
+    height: calc(100vh - 50px); /* Set the height to the viewport height minus the header and footer heights (25px + 25px) */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+/* Make sure the box-content element is positioned absolutely within the scrollable-box parent */
+.box-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

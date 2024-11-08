@@ -1,6 +1,6 @@
 /* Check for supported paths */
 window.addEventListener('load', function() {
-    const knownPaths = ['/', '/about', '/contact', '/gallery', '/index', '/lore', '/music', '/privacy-policy', '/stream', '/terms-of-service', '/vtuber', '/404', '/m'];
+    const knownPaths = ['/', '/about', '/contact', '/gallery', '/index', '/lore', '/music', '/privacy-policy', '/stream', '/terms-of-service', '/vtuber', '/404'];
     if (!knownPaths.includes(window.location.pathname) && window.location.pathname !== '/404') {
         window.location.href = '/404';
     }
@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
 
 /* Mobile Check */
 if (/Mobi|Android/i.test(navigator.userAgent)) {
-    window.location.href = "./m";
+    window.location.href = "./404";
 }
 
 /* Anti Keys*/
