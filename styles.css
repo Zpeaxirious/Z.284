@@ -135,10 +135,10 @@ main {
     background-color: #ffc1f8; /* Change this to customize the background color */
     overflow-y: auto; /* Enable scrolling */
     text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff; /* Outline effect */
+    -1px -1px 0 #d3d3d3,
+    1px -1px 0 #d3d3d3,
+    -1px 1px 0 #d3d3d3,
+    1px 1px 0 #d3d3d3; /* Outline effect */
 }
 
 /* Make sure the box-content element is positioned absolutely within the scrollable-box parent */
@@ -148,9 +148,4 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    text-shadow: 
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff; /* Outline effect */
 }
