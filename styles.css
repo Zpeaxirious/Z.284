@@ -134,6 +134,11 @@ main {
     padding: 10px;
     background-color: #ffc1f8; /* Change this to customize the background color */
     overflow-y: auto; /* Enable scrolling */
+    text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; /* Outline effect */
 }
 
 /* Make sure the box-content element is positioned absolutely within the scrollable-box parent */
