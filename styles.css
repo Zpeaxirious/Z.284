@@ -149,3 +149,8 @@ main {
     right: 0;
     bottom: 0;
 }
+
+/* Search */
+.gcse-search {
+    margin: 20px;
+}
