@@ -128,3 +128,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.querySelector('.server').innerText = new Date().toLocaleString("en-US", {timeZone: serverTime});
     document.querySelector('.local').innerText = new Date().toLocaleString("en-US", {timeZone: localTime});
 });
+
+/* Search */
+import { searchClient } from '@algolia/client-search';
+const client = searchClient('ELR9BN15I3', 'a36a7bc23e122b333cd47da77e62cbaf');
+
+// Fetch and index objects in Algolia
+const processRecords = async () => {
+    const datasetRequest = await fetch('https://dashboard.algolia.com/sample_datasets/movie.json');
+    const movies = await datasetRequest.json();
+    return await client.saveObjects({ indexName: 'movies_index', objects: movies });
+};
+
+processRecords()
+    .then(() => console.log('Successfully indexed objects!'))
+    .catch((err) => console.error(err));
