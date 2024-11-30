@@ -158,10 +158,11 @@ main {
 /* Iframe resize */
 .iframe-container {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    width: 50%; /* 50% of the original width */
+    padding-bottom: 28.125%; /* 50% of the original padding-bottom for 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
+    margin: 0 auto; /* Center the container */
 }
 
 .iframe-container iframe {
