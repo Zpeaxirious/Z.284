@@ -173,3 +173,37 @@ main {
     height: 100%;
     border: 0;
 }
+
+/* Hover block thingy */
+.hover-text-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-text {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hover-box {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the text */
+    left: 0;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    width: 200px;
+    border-radius: 5px;
+}
+
+/* Show hover box on hover */
+.hover-text-container:hover .hover-box,
+.hover-box:hover {
+    display: block;
+}
