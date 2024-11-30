@@ -68,12 +68,17 @@ body {
 }
 
 header {
-    background: #ffc1f8;
+    border: 1px solid rgba(255, 255, 255, 0.65); /* Beveled effect */
+    border-radius: 13px; /* Rounded edges for a beveled look */
+    margin: 20px;
+    background: #ffc1f883;
+    position: relative;
     font-family: 'virgo', sans-serif;
     padding: 10px;
     text-align: center;
     text-shadow: #aba0af8e 1px 0 1px;
     text-decoration: none;
+    backdrop-filter: blur(10px);
 }
 
 footer {
