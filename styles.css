@@ -139,7 +139,7 @@ main {
     backdrop-filter: blur(10px);
     position: relative;
     padding: 25px; /* Top and bottom padding */
-    height: calc(100vh - 200px); /* Height minus header, footer, and top/bottom padding */
+    height: calc(100vh - 250px); /* Height minus header, footer, and top/bottom padding */
     border-radius: 16px; /* Make the beveling 16px */
     padding: 10px;
     overflow-y: auto; /* Enable scrolling */
