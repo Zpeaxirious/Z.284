@@ -219,3 +219,247 @@ footer {
         padding-bottom: 50%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'virgo';
+    src: url('./fonts/virgo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nasa';
+    src: url('./fonts/nasa.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --text: var(--color-text);
+    --background: var(--color-background);
+    --primary: var(--color-primary);
+    --secondary: var(--color-secondary);
+    --accent: var(--color-accent);
+}
+
+:root[data-theme="light"] {
+    --color-text: #250a2e;
+    --color-background: #feebff;
+    --color-primary: #dd1dca;
+    --color-secondary: #ffc1f8;
+    --color-accent: #ff3de2;
+}
+
+:root[data-theme="dark"] {
+    --color-text: #ecd1f5;
+    --color-background: #000000;
+    --color-primary: #e222cf;
+    --color-secondary: #552a50;
+    --color-accent: #c200a5;
+}
+
+/* Unvisited link */
+a:link {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* Visited link */
+a:visited {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* Mouse over link */
+a:hover {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* Selected link */
+a:active {
+    color: var(--text);
+    text-decoration: none;
+}
+
+body {
+    color: var(--background);
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border-radius: 13px; /* Rounded edges for a beveled look */
+    margin: 20px;
+    position: relative;
+    font-family: 'virgo', sans-serif;
+    padding: 10px;
+    text-align: center;
+    text-shadow: #aba0af8e 1px 0 1px;
+    text-decoration: none;
+    background: #ffc1f883;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+footer {
+    background: #ffc1f8;
+    font-family: 'nasa', sans-serif;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-shadow: #aba0af8e 1px 0 1px;
+}
+
+#footer {
+    background: #ffc1f8;
+    font-family: 'nasa', sans-serif;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-shadow: #aba0af8e 1px 0 1px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-shadow: #aba0af8e 1px 0 1px;
+    text-decoration: none;
+}
+
+main {
+    font-family: 'nasa', sans-serif;
+    margin: 20px;
+    text-align: center;
+    text-shadow: #aba0af8e 1px 0 1px;
+}
+
+/* Time */
+#time {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.scrollable-box {
+    background-color: #ffc1f883;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: relative;
+    padding: 25px; /* Top and bottom padding */
+    height: calc(100vh - 225px); /* Height minus header, footer, and top/bottom padding */
+    border-radius: 16px; /* Make the beveling 16px */
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling */
+    text-shadow:
+    -1px -1px 0 #d3d3d3,
+    1px -1px 0 #d3d3d3,
+    -1px 1px 0 #d3d3d3,
+    1px 1px 0 #d3d3d3; /* Outline effect */
+}
+
+/* Make sure the box-content element is positioned absolutely within the scrollable-box parent */
+.box-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Search */
+.gcse-search {
+    margin: 200px;
+}
+
+/* Iframe resize */
+.iframe-container {
+    position: relative;
+    width: 50%; /* 50% of the original width */
+    padding-bottom: 28.125%; /* 50% of the original padding-bottom for 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto; /* Center the container */
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Hover block thingy */
+.hover-text-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-text {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hover-box {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the text */
+    left: 0;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    width: 200px;
+    border-radius: 5px;
+}
+
+/* Show hover box on hover */
+.hover-text-container:hover .hover-box,
+.hover-box:hover {
+    display: block;
+}
