@@ -25,4 +25,3 @@ Have any questions, feedback, or collaboration inquiries? Feel free to reach out
 | /lore | Lore | Started |
 | /contact | Contact | Started |
 | /vtuber | VTuber | WIP |
-| /lore | Lore | Started |
