@@ -1,177 +1,142 @@
+/* Reset and Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font Imports with Performance Optimization */
 @font-face {
     font-family: 'virgo';
     src: url('./fonts/virgo.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-display: swap; /* Prevent font loading delays */
 }
 
 @font-face {
     font-family: 'nasa';
     src: url('./fonts/nasa.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-display: swap;
 }
 
+/* CSS Variables */
 :root {
-    --text: var(--color-text);
-    --background: var(--color-background);
-    --primary: var(--color-primary);
-    --secondary: var(--color-secondary);
-    --accent: var(--color-accent);
-}
-
-:root[data-theme="light"] {
     --color-text: #250a2e;
     --color-background: #feebff;
     --color-primary: #dd1dca;
     --color-secondary: #ffc1f8;
     --color-accent: #ff3de2;
+
+    --border-radius: 13px;
+    --text-shadow: #aba0af8e 1px 0 1px;
+    --transition: all 0.3s ease-in-out;
 }
 
-:root[data-theme="dark"] {
-    --color-text: #ecd1f5;
-    --color-background: #000000;
-    --color-primary: #e222cf;
-    --color-secondary: #552a50;
-    --color-accent: #c200a5;
+/* Dark Theme Variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #ecd1f5;
+        --color-background: #000000;
+        --color-primary: #e222cf;
+        --color-secondary: #552a50;
+        --color-accent: #c200a5;
+    }
 }
 
-/* Unvisited link */
-a:link {
-    color: var(--text);
-    text-decoration: none;
-}
-
-/* Visited link */
-a:visited {
-    color: var(--text);
-    text-decoration: none;
-}
-
-/* Mouse over link */
-a:hover {
-    color: var(--text);
-    text-decoration: none;
-}
-
-/* Selected link */
-a:active {
-    color: var(--text);
-    text-decoration: none;
-}
-
+/* Global Styles */
 body {
-    color: var(--background);
-    opacity: 1;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: 'nasa', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    text-shadow: none;
+    overflow-x: hidden;
+    transition: var(--transition);
 }
 
-header {
-    border-radius: 13px; /* Rounded edges for a beveled look */
-    margin: 20px;
-    position: relative;
-    font-family: 'virgo', sans-serif;
-    padding: 10px;
-    text-align: center;
-    text-shadow: #aba0af8e 1px 0 1px;
+a {
+    color: var(--color-primary);
     text-decoration: none;
-    background: #ffc1f883;
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    -webkit-backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Header */
+header {
+    background: rgba(255, 193, 248, 0.51); /* Light pink */
+    border-radius: var(--border-radius);
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: var(--text-shadow);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    transition: var(--transition);
 }
 
-footer {
-    background: #ffc1f8;
-    font-family: 'nasa', sans-serif;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-shadow: #aba0af8e 1px 0 1px;
-}
-
-#footer {
-    background: #ffc1f8;
-    font-family: 'nasa', sans-serif;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-shadow: #aba0af8e 1px 0 1px;
+header h1 a {
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav a {
-    text-shadow: #aba0af8e 1px 0 1px;
-    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    text-shadow: var(--text-shadow);
+    transition: var(--transition);
 }
 
+nav a:hover {
+    background: var(--color-secondary);
+    color: var(--color-background);
+}
+
+/* Main Content */
 main {
     font-family: 'nasa', sans-serif;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
     text-align: center;
-    text-shadow: #aba0af8e 1px 0 1px;
 }
 
-/* Time */
-#time {
-    font-size: 1.2rem;
-    margin-top: 10px;
+/* Sections */
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
 }
 
-.scrollable-box {
-    background-color: #ffc1f883;
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    position: relative;
-    padding: 25px; /* Top and bottom padding */
-    height: calc(100vh - 225px); /* Height minus header, footer, and top/bottom padding */
-    border-radius: 16px; /* Make the beveling 16px */
-    padding: 10px;
-    overflow-y: auto; /* Enable scrolling */
-    text-shadow:
-    -1px -1px 0 #d3d3d3,
-    1px -1px 0 #d3d3d3,
-    -1px 1px 0 #d3d3d3,
-    1px 1px 0 #d3d3d3; /* Outline effect */
+section:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
-/* Make sure the box-content element is positioned absolutely within the scrollable-box parent */
-.box-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* Search */
-.gcse-search {
-    margin: 200px;
-}
-
-/* Iframe resize */
+/* Iframe Container */
 .iframe-container {
     position: relative;
-    width: 50%; /* 50% of the original width */
-    padding-bottom: 28.125%; /* 50% of the original padding-bottom for 16:9 aspect ratio */
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .iframe-container iframe {
@@ -180,39 +145,77 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
+    border: none;
 }
 
-/* Hover block thingy */
+/* Footer */
+footer {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+/* Hover Text Container */
 .hover-text-container {
     position: relative;
     display: inline-block;
-}
-
-.hover-text {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 .hover-box {
     display: none;
     position: absolute;
-    top: 100%; /* Position below the text */
+    top: 100%;
     left: 0;
-    background-color: white;
+    background: white;
     padding: 15px;
-    border: 1px solid #ddd;
+    border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 10;
     width: 200px;
-    border-radius: 5px;
 }
 
-/* Show hover box on hover */
-.hover-text-container:hover .hover-box,
-.hover-box:hover {
+.hover-text-container:hover .hover-box {
     display: block;
+}
+
+/* Scrollable Box */
+.scrollable-box {
+    background-color: rgba(255, 193, 248, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    padding: 15px;
+    height: calc(100vh - 225px);
+    overflow-y: auto;
+    text-shadow: -1px -1px 0 #d3d3d3, 1px -1px 0 #d3d3d3, -1px 1px 0 #d3d3d3, 1px 1px 0 #d3d3d3;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !: 15px;
+    }
+
+    .iframe-container {
+        width: 90%;
+        padding-bottom: 50%;
+    }
 }
