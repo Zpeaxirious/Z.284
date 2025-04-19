@@ -1,0 +1,221 @@
+/* Reset and Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font Imports with Performance Optimization */
+@font-face {
+    font-family: 'virgo';
+    src: url('./fonts/virgo.ttf') format('truetype');
+    font-display: swap; /* Prevent font loading delays */
+}
+
+@font-face {
+    font-family: 'nasa';
+    src: url('./fonts/nasa.otf') format('opentype');
+    font-display: swap;
+}
+
+/* CSS Variables */
+:root {
+    --color-text: #250a2e;
+    --color-background: #feebff;
+    --color-primary: #dd1dca;
+    --color-secondary: #ffc1f8;
+    --color-accent: #ff3de2;
+
+    --border-radius: 13px;
+    --text-shadow: #aba0af8e 1px 0 1px;
+    --transition: all 0.3s ease-in-out;
+}
+
+/* Dark Theme Variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #ecd1f5;
+        --color-background: #000000;
+        --color-primary: #e222cf;
+        --color-secondary: #552a50;
+        --color-accent: #c200a5;
+    }
+}
+
+/* Global Styles */
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: 'nasa', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-shadow: none;
+    overflow-x: hidden;
+    transition: var(--transition);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Header */
+header {
+    background: rgba(255, 193, 248, 0.51); /* Light pink */
+    border-radius: var(--border-radius);
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: var(--text-shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    transition: var(--transition);
+}
+
+header h1 a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    text-shadow: var(--text-shadow);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background: var(--color-secondary);
+    color: var(--color-background);
+}
+
+/* Main Content */
+main {
+    font-family: 'nasa', sans-serif;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Sections */
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+section:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Iframe Container */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+/* Hover Text Container */
+.hover-text-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hover-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    width: 200px;
+}
+
+.hover-text-container:hover .hover-box {
+    display: block;
+}
+
+/* Scrollable Box */
+.scrollable-box {
+    background-color: rgba(255, 193, 248, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+    padding: 15px;
+    height: calc(100vh - 225px);
+    overflow-y: auto;
+    text-shadow: -1px -1px 0 #d3d3d3, 1px -1px 0 #d3d3d3, -1px 1px 0 #d3d3d3, 1px 1px 0 #d3d3d3;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !: 15px;
+    }
+
+    .iframe-container {
+        width: 90%;
+        padding-bottom: 50%;
+    }
+}
